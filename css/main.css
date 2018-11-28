@@ -94,6 +94,15 @@ a:hover, a:focus, a:active {
 	outline: 0;
 }
 
+c, c:visited {
+	/* color: #000000; */
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
 /**
  * ===================================================================
  * 03. typography & general theme styles - (_document-setup.scss)
@@ -1023,7 +1032,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	background: #ebebeb;
 }
 .dark-grey-section {
-	background: #C0C0C0;
+	/* background: #C0C0C0; */
 }
 .grey-section p.lead {
 	color: #7d7d7d;
@@ -1261,6 +1270,22 @@ header .logo a {
 .main-navigation li.current > a {
 	background: none;
 	color: #2F4F4F;
+}
+#menu-highlight {
+	background: none;
+	color: #2F4F4F;
+}
+.main-navigation li c {
+	display: block;
+	/* color: #FFFFFF; */
+	width: auto;
+	padding: 15px 0;
+	line-height: 16px;
+	border: none;
+}
+.main-navigation li c:hover {
+	color: #2F4F4F;
+	padding-left: 1rem;
 }
 
 /**
@@ -1794,6 +1819,7 @@ header .logo a {
 #projects {
 	padding-top: 12rem;
 	padding-bottom: 12rem;
+	background: #C0C0C0;
 }
 
 #projects .github-card {
@@ -1812,6 +1838,17 @@ header .logo a {
     height: 100%;
 }
 
+/**
+ * ===================================================================
+ * 13. posts - (_layout.scss)
+ *
+ * -------------------------------------------------------------------
+ */
+#posts {
+	padding-top: 12rem;
+	padding-bottom: 12rem;
+	background: #C0C0C0;
+}
 
 /**
  * ===================================================================
