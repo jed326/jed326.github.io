@@ -788,6 +788,10 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     height: 100%;
 }
 
+.doc-intro {
+	/* font-size: 12px */
+	text-align: left
+}
 
 /**
  * alert box - (_alert-box.scss)
