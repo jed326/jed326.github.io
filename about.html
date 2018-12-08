@@ -125,13 +125,188 @@
    ================================================== -->
    <section id="about">
 
+     <style>
+     * {box-sizing: border-box}
+     body {font-family: Verdana, sans-serif; margin:0}
+     .mySlides {display: none}
+     img {vertical-align: middle;}
+
+     /* Slideshow container */
+     .slideshow-container {
+       max-width: 1000px;
+       position: relative;
+       margin: auto;
+     }
+
+     /* Next & previous buttons */
+     .prev, .next {
+       cursor: pointer;
+       position: absolute;
+       top: 50%;
+       width: auto;
+       padding: 16px;
+       margin-top: -22px;
+       color: white;
+       font-weight: bold;
+       font-size: 18px;
+       transition: 0.6s ease;
+       border-radius: 0 3px 3px 0;
+       user-select: none;
+     }
+
+     /* Position the "next button" to the right */
+     .next {
+       right: 0;
+       border-radius: 3px 0 0 3px;
+     }
+
+     /* On hover, add a black background color with a little bit see-through */
+     .prev:hover, .next:hover {
+       background-color: rgba(0,0,0,0.8);
+     }
+
+     /* Caption text */
+     .text {
+       color: #f2f2f2;
+       font-size: 15px;
+       padding: 8px 12px;
+       position: absolute;
+       bottom: 8px;
+       width: 100%;
+       text-align: center;
+     }
+
+     /* Number text (1/3 etc) */
+     .numbertext {
+       color: #f2f2f2;
+       font-size: 12px;
+       padding: 8px 12px;
+       position: absolute;
+       top: 0;
+     }
+
+     /* The dots/bullets/indicators */
+     .dot {
+       cursor: pointer;
+       height: 15px;
+       width: 15px;
+       margin: 0 2px;
+       background-color: #bbb;
+       border-radius: 50%;
+       display: inline-block;
+       transition: background-color 0.6s ease;
+     }
+
+     .active, .dot:hover {
+       background-color: #717171;
+     }
+
+     /* Fading animation */
+     .fade {
+       -webkit-animation-name: fade;
+       -webkit-animation-duration: 1.5s;
+       animation-name: fade;
+       animation-duration: 1.5s;
+     }
+
+     @-webkit-keyframes fade {
+       from {opacity: .4}
+       to {opacity: 1}
+     }
+
+     @keyframes fade {
+       from {opacity: .4}
+       to {opacity: 1}
+     }
+
+     /* On smaller screens, decrease text size */
+     @media only screen and (max-width: 300px) {
+       .prev, .next,.text {font-size: 11px}
+     }
+     </style>
+     </head>
+     <body>
+
+     <div class="slideshow-container">
+
+     <div class="mySlides fade">
+       <div class="numbertext">1 / 3</div>
+       <img src="images/slides/img1.jpg" style="width:100%">
+       <div class="text" style="color:#000000">Turning 17 in China With Grandparents.</div>
+     </div>
+
+     <div class="mySlides fade">
+       <div class="numbertext">2 / 3</div>
+       <img src="images/slides/img2.jpg" style="width:100%">
+       <div class="text">Debate Tournament Trophies and Plaques</div>
+     </div>
+
+     <div class="mySlides fade">
+       <div class="numbertext">3 / 3</div>
+       <img src="images/slides/img3.jpg" style="width:100%">
+       <div class="text">Coaching State College Tennis Camp</div>
+     </div>
+
+     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+     <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+     </div>
+     <br>
+
+     <div style="text-align:center">
+       <span class="dot" onclick="currentSlide(1)"></span>
+       <span class="dot" onclick="currentSlide(2)"></span>
+       <span class="dot" onclick="currentSlide(3)"></span>
+     </div>
+
+     <script>
+     var slideIndex = 1;
+     showSlides(slideIndex);
+
+     function plusSlides(n) {
+       showSlides(slideIndex += n);
+     }
+
+     function currentSlide(n) {
+       showSlides(slideIndex = n);
+     }
+
+     function showSlides(n) {
+       var i;
+       var slides = document.getElementsByClassName("mySlides");
+       var dots = document.getElementsByClassName("dot");
+       if (n > slides.length) {slideIndex = 1}
+       if (n < 1) {slideIndex = slides.length}
+       for (i = 0; i < slides.length; i++) {
+           slides[i].style.display = "none";
+       }
+       for (i = 0; i < dots.length; i++) {
+           dots[i].className = dots[i].className.replace(" active", "");
+       }
+       slides[slideIndex-1].style.display = "block";
+       dots[slideIndex-1].className += " active";
+     }
+     </script>
+
+
    	<div class="row section-intro">
 
    		<div class="col-twelve">
 
    			<h1>My Story</h1>
 
-   			<p class="lead">Biographical Narrative Coming Soon!</p>
+
+
+   			<p class="doc-intro">I was born in the small town of State College, Pennsylvania on January 4, 1998. My parents had immigrated to the United States from China just a few years earlier,
+                             making me the first American citizen in our family. My parents, cognizant of the opportunities they didn’t have in their own childhoods, supported me to explore as
+                             many activities and hobbies I could fill my time with.<br/><br/>
+                            Throughout my childhood and into high school, I played the piano and the saxophone, I participated in high school speech and debate, and was the varsity captain of
+                            the State College Area High School boys tennis team. These activities taught me the value of simply trying new things. In fact, that’s how I got drawn into computer
+                            science, the career path I’m currently on. In high school, I was looking for a math elective to take with one of my high school friends and we stumbled across the A
+                            Computer Science class at my school. The course showed me that computer science was essentially a whole new paradigm of problem solving and I was hooked immediately.<br/><br/>
+                            Fast forward a few years and now I am three semesters away from graduating with a degree in Computer Science from Penn State. At PSU I’ve taken courses that have
+                            challenged me to quickly learn new things, I have done undergraduate research at a research lab funded by the United States Navy, and I have even completed a summer
+                            internship at J.P.Morgan Chase & Co. For next summer, I have an internship lined up with Capital One and I can’t wait for what the future has to bring.</p>
 
    		</div>
 
@@ -164,6 +339,7 @@
 	      	<div class="copyright">
 		        	<span>© Copyright Kards 2016.</span>
 		        	<span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>
+              <div>All Images Taken by Jay Deng</div>
 		         </div>
 	      	</div>
 

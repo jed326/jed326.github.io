@@ -793,6 +793,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	text-align: left
 }
 
+
+
 /**
  * alert box - (_alert-box.scss)
  * -------------------------------------------------------------------
@@ -1871,6 +1873,12 @@ header .logo a {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+#reflection {
+	padding-top: 12rem;
+	padding-bottom: 12rem;
+	background: #ebebeb;
 }
 
 /**
